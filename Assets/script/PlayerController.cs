@@ -12,13 +12,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKey(KeyCode.RightArrow)){
-
-            this.gameObject.transform.Translate(0.05f, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.R))
         {
-            this.gameObject.transform.Translate(-0.05f, 0, 0);
+
+            this.gameObject.transform.Translate(0.02f, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.L))
+        {
+            this.gameObject.transform.Translate(-0.02f, 0, 0);
         }
     }
 
